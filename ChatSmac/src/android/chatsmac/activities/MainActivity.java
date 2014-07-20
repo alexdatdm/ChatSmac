@@ -98,27 +98,6 @@ public class MainActivity extends Activity {
 			}
 		});
 
-		// sendButton.setOnClickListener(new View.OnClickListener() {
-		// @Override
-		// public void onClick(View v) {
-		//
-		// String lastMsg = messageEditText.getText().toString();
-		// // Toast.makeText(getApplicationContext(), ,
-		// // Toast.LENGTH_LONG).show();
-		// String request = lastMsg.replace(" ", "%20");
-		// // Toast.makeText(getApplicationContext(), request,
-		// // Toast.LENGTH_LONG).show();
-		// Log.d("Http Get Response:", request);
-		// new HttpAsyncTask()
-		// .execute("http://tech.fpt.com.vn/AIML/api/bots/53aa8586e4b0f1230cde86bc/chat?request="
-		// + request
-		// + "&token=eb086f7b-3b11-4ab9-984f-7f3f1f36147a");
-		//
-		// showMessage(new ChatMessage(lastMsg, Calendar.getInstance()
-		// .getTime(), false));
-		// messageEditText.setText("");
-		// }
-		// });
 	}
 
 	public void showMessage(ChatMessage message) {
@@ -191,8 +170,7 @@ public class MainActivity extends Activity {
 			try {
 				JSONObject jsonObj = new JSONObject(result);
 				abc = jsonObj.getString("response");
-				// Toast.makeText(getBaseContext(), abc,
-				// Toast.LENGTH_LONG).show();
+
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -220,7 +198,6 @@ public class MainActivity extends Activity {
 				ArrayList<String> text = data
 						.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
 
-//				messageEditText.setText(text.get(0));
 				String request = text.get(0).replace(" ", "%20");
 				Log.d("Http Get Response:", request);
 				new HttpAsyncTask()
