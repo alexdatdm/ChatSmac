@@ -34,8 +34,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -65,9 +63,6 @@ public class MainActivity extends Activity {
 		messageEditText = (EditText) findViewById(R.id.messageEdit);
 		sendButton = (Button) findViewById(R.id.chatSendButton);
 		microButton = (Button) findViewById(R.id.chatMicroButton);
-		TextView meLabel = (TextView) findViewById(R.id.meLabel);
-		TextView companionLabel = (TextView) findViewById(R.id.companionLabel);
-		RelativeLayout container = (RelativeLayout) findViewById(R.id.container);
 
 		adapter = new ChatAdapter(this, new ArrayList<ChatMessage>());
 		messagesContainer.setAdapter(adapter);
@@ -224,7 +219,7 @@ public class MainActivity extends Activity {
 				String request = lastMsg.replace(" ", "%20");
 				Log.d("Http Get Response:", request);
 				new HttpAsyncTask()
-						.execute("http://tech.fpt.com.vn/AIML/api/bots/53aa8586e4b0f1230cde86bc/chat?request="
+						.execute("http://tech.fpt.com.vn/AIML/api/bots/53cb764de4b04a9d44599aa6/chat?request="
 								+ request
 								+ "&token=eb086f7b-3b11-4ab9-984f-7f3f1f36147a");
 

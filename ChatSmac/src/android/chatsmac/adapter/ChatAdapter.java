@@ -67,10 +67,12 @@ public class ChatAdapter extends BaseAdapter {
 		setAlignment(holder, chatMessage.isIncoming());
 		holder.txtMessage.setText(chatMessage.getText());
 		if (chatMessage.getSender() != null) {
-			holder.txtInfo.setText(chatMessage.getSender() + ": "
-					+ getTimeText(chatMessage.getTime()));
+//			holder.txtInfo.setText(chatMessage.getSender() + ": "
+//					+ getTimeText(chatMessage.getTime()));
+			 holder.txtInfo.setText(chatMessage.getSender());
 		} else {
-			holder.txtInfo.setText(getTimeText(chatMessage.getTime()));
+//			holder.txtInfo.setText(getTimeText(chatMessage.getTime()));
+			 holder.txtInfo.setText("");
 		}
 
 		return convertView;

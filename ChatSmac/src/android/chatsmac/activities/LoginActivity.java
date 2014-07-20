@@ -1,6 +1,5 @@
 package android.chatsmac.activities;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.example.chatsmac.R;

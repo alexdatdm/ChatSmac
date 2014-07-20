@@ -50,36 +50,36 @@
 
         <TextView
             android:id="@+id/meLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_gravity="left|center_vertical"
             android:singleLine="false"
-            android:text="Me"
-            android:textSize="15dp" />
+            android:background="@drawable/human" />
 
         <TextView
             android:id="@+id/companionLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
             android:layout_alignParentRight="true"
-            android:text="SmartOsi"
-            android:textSize="15dp" />
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/iconchat" />
 
         <Button
             android:id="@+id/chatSendButton"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginTop="10dp"
             android:layout_alignRight="@+id/messagesContainer"
             android:layout_below="@+id/messagesContainer"
+            android:layout_marginTop="10dp"
             android:background="@drawable/send1" />
+
         <Button
             android:id="@+id/chatMicroButton"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_marginTop="10dp"
             android:layout_alignRight="@+id/messagesContainer"
             android:layout_below="@+id/messagesContainer"
+            android:layout_marginTop="10dp"
             android:background="@drawable/micro1" />
 
         <View
