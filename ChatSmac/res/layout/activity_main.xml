@@ -54,7 +54,7 @@
             android:layout_height="28dp"
             android:layout_gravity="left|center_vertical"
             android:singleLine="false"
-            android:background="@drawable/human" />
+            android:background="@drawable/humans" />
 
         <TextView
             android:id="@+id/companionLabel"
@@ -62,7 +62,7 @@
             android:layout_height="28dp"
             android:layout_alignParentRight="true"
             android:layout_marginBottom="25dp"
-            android:background="@drawable/iconchat" />
+            android:background="@drawable/nao" />
 
         <Button
             android:id="@+id/chatSendButton"

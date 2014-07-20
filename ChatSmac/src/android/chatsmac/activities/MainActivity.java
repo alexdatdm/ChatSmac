@@ -41,7 +41,7 @@ public class MainActivity extends Activity {
 	private EditText messageEditText;
 	private ChatAdapter adapter;
 	private ListView messagesContainer;
-	String abc;
+	String textDisplay;
 	Button sendButton, microButton;
 
 	public static void start(Context context, Bundle bundle) {
@@ -164,13 +164,13 @@ public class MainActivity extends Activity {
 
 			try {
 				JSONObject jsonObj = new JSONObject(result);
-				abc = jsonObj.getString("response");
+				textDisplay = jsonObj.getString("response");
 
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
 
-			showMessage(new ChatMessage(abc, Calendar.getInstance().getTime(),
+			showMessage(new ChatMessage(textDisplay, Calendar.getInstance().getTime(),
 					true));
 		}
 	}
@@ -196,7 +196,7 @@ public class MainActivity extends Activity {
 				String request = text.get(0).replace(" ", "%20");
 				Log.d("Http Get Response:", request);
 				new HttpAsyncTask()
-						.execute("http://tech.fpt.com.vn/AIML/api/bots/53aa8586e4b0f1230cde86bc/chat?request="
+						.execute("http://tech.fpt.com.vn/AIML/api/bots/53cb764de4b04a9d44599aa6/chat?request="
 								+ request
 								+ "&token=eb086f7b-3b11-4ab9-984f-7f3f1f36147a");
 
