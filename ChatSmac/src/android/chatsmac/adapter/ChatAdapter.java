@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class ChatAdapter extends BaseAdapter {
 
-	private static final String DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
+	private static final String DATE_FORMAT = "hh:mm aa";
 	private final List<ChatMessage> chatMessages;
 	private Context context;
 
@@ -67,12 +67,12 @@ public class ChatAdapter extends BaseAdapter {
 		setAlignment(holder, chatMessage.isIncoming());
 		holder.txtMessage.setText(chatMessage.getText());
 		if (chatMessage.getSender() != null) {
-//			holder.txtInfo.setText(chatMessage.getSender() + ": "
-//					+ getTimeText(chatMessage.getTime()));
-			 holder.txtInfo.setText(chatMessage.getSender());
+			holder.txtInfo.setText(chatMessage.getSender() + ": "
+					+ getTimeText(chatMessage.getTime()));
+//			 holder.txtInfo.setText(chatMessage.getSender());
 		} else {
-//			holder.txtInfo.setText(getTimeText(chatMessage.getTime()));
-			 holder.txtInfo.setText("");
+			holder.txtInfo.setText(getTimeText(chatMessage.getTime()));
+//			 holder.txtInfo.setText("");
 		}
 
 		return convertView;

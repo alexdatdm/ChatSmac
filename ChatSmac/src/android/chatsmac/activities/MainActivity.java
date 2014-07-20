@@ -23,6 +23,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.example.chatsmac.R;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
@@ -170,8 +171,8 @@ public class MainActivity extends Activity {
 				e.printStackTrace();
 			}
 
-			showMessage(new ChatMessage(textDisplay, Calendar.getInstance().getTime(),
-					true));
+			showMessage(new ChatMessage(textDisplay, Calendar.getInstance()
+					.getTime(), true));
 		}
 	}
 

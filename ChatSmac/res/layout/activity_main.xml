@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignTop="@+id/messagesContainer"
-            android:background="#f0f0f0" />
+            android:background="#EAEAEA" />
 
         <ListView
             android:id="@+id/messagesContainer"
@@ -86,7 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_alignBottom="@+id/messagesContainer"
-            android:background="#f0f0f0" />
+            android:background="#EAEAEA" />
     </RelativeLayout>
 
 </LinearLayout>
